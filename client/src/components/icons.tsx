@@ -1,5 +1,19 @@
 import React from 'react';
 
+export const CIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" fill="#00599C" stroke="black" stroke-width="2"/>
+    <text x="50" y="65" font-family="Arial, sans-serif" font-size="50" fill="white" text-anchor="middle">C</text>
+  </svg>
+);
+
+export const CppIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" fill="#00599C" stroke="black" stroke-width="2"/>
+    <text x="50" y="65" font-family="Arial, sans-serif" font-size="40" fill="white" text-anchor="middle">C++</text>
+  </svg>
+);
+
 export const JavaIcon = () => (
   <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M18.29 11.29a5.32 5.32 0 0 0-3.6-3.6 5.32 5.32 0 0 0 3.6-3.6 5.32 5.32 0 0 0 3.6 3.6 5.32 5.32 0 0 0-3.6 3.6zM12.92 12.92a4.42 4.42 0 0 0-3.23-3.23 4.42 4.42 0 0 0 3.23-3.23 4.42 4.42 0 0 0 3.23 3.23 4.42 4.42 0 0 0-3.23 3.23zm-1.84-1.84a3.53 3.53 0 0 0-2.85-2.85 3.53 3.53 0 0 0 2.85-2.85 3.53 3.53 0 0 0 2.85 2.85 3.53 3.53 0 0 0-2.85 2.85z" fill="#007396"/>

@@ -2,41 +2,42 @@ import { Card } from '@/components/ui/card';
 import {
   JavaIcon, PythonIcon, JavascriptIcon, Html5Icon, Css3Icon, BashIcon, SpringBootIcon,
   DjangoIcon, FastApiIcon, NodejsIcon, LinuxIcon, GitIcon, GithubIcon, VimIcon, VscodeIcon,
-  IntellijIcon, PycharmIcon, BackendIcon, SystemDesignIcon, AlgorithmsIcon, CloudIcon
+  IntellijIcon, PycharmIcon, BackendIcon, SystemDesignIcon, AlgorithmsIcon, CloudIcon,
+  CIcon, CppIcon
 } from './icons';
 
 
 const skills = {
   languages: [
-    { name: 'C', icon: BackendIcon, color: '#A8B9CC' },
-    { name: 'C++', icon: BackendIcon, color: '#00599C' },
-    { name: 'Java', icon: JavaIcon, color: '#007396' },
-    { name: 'Python', icon: PythonIcon, color: '#3776AB' },
-    { name: 'JavaScript', icon: JavascriptIcon, color: '#F7DF1E' },
-    { name: 'HTML5', icon: Html5Icon, color: '#E34F26' },
-    { name: 'CSS3', icon: Css3Icon, color: '#1572B6' },
-    { name: 'Bash', icon: BashIcon, color: '#4EAA25' },
+    { name: 'C', icon: CIcon },
+    { name: 'C++', icon: CppIcon },
+    { name: 'Java', icon: JavaIcon },
+    { name: 'Python', icon: PythonIcon },
+    { name: 'JavaScript', icon: JavascriptIcon },
+    { name: 'HTML5', icon: Html5Icon },
+    { name: 'CSS3', icon: Css3Icon },
+    { name: 'Bash', icon: BashIcon },
   ],
   frameworks: [
-    { name: 'Spring Boot', icon: SpringBootIcon, color: '#6DB33F' },
-    { name: 'Django', icon: DjangoIcon, color: '#092E20' },
-    { name: 'FastAPI', icon: FastApiIcon, color: '#009688' },
-    { name: 'Node.js', icon: NodejsIcon, color: '#339933' },
+    { name: 'Spring Boot', icon: SpringBootIcon },
+    { name: 'Django', icon: DjangoIcon },
+    { name: 'FastAPI', icon: FastApiIcon },
+    { name: 'Node.js', icon: NodejsIcon },
   ],
   tools: [
-    { name: 'Linux', icon: LinuxIcon, color: '#FCC624' },
-    { name: 'Git', icon: GitIcon, color: '#F05032' },
-    { name: 'GitHub', icon: GithubIcon, color: '#181717' },
-    { name: 'Vim', icon: VimIcon, color: '#019733' },
-    { name: 'VS Code', icon: VscodeIcon, color: '#007ACC' },
-    { name: 'IntelliJ', icon: IntellijIcon, color: '#FFFFFF' },
-    { name: 'PyCharm', icon: PycharmIcon, color: '#FFFFFF' },
+    { name: 'Linux', icon: LinuxIcon },
+    { name: 'Git', icon: GitIcon },
+    { name: 'GitHub', icon: GithubIcon },
+    { name: 'Vim', icon: VimIcon },
+    { name: 'VS Code', icon: VscodeIcon },
+    { name: 'IntelliJ', icon: IntellijIcon },
+    { name: 'PyCharm', icon: PycharmIcon },
   ],
   specialties: [
-    { name: 'Backend Dev', icon: BackendIcon, color: '#FFFFFF' },
-    { name: 'System Design', icon: SystemDesignIcon, color: '#1793D1' },
-    { name: 'Algorithms', icon: AlgorithmsIcon, color: '#F9AC4F' },
-    { name: 'Cloud', icon: CloudIcon, color: '#00A1DE' },
+    { name: 'Backend Dev', icon: BackendIcon },
+    { name: 'System Design', icon: SystemDesignIcon },
+    { name: 'Algorithms', icon: AlgorithmsIcon },
+    { name: 'Cloud', icon: CloudIcon },
   ],
 };
 
@@ -67,7 +68,7 @@ export default function SkillsSection() {
   );
 }
 
-function SkillCategory({ title, skills }: { title: string; skills: Array<{ name: string; icon: any, color: string }> }) {
+function SkillCategory({ title, skills }: { title: string; skills: Array<{ name: string; icon: any }> }) {
   return (
     <div className="space-y-6 scale-in">
       <h3 className="text-xl md:text-2xl font-semibold text-primary/80" data-testid={`text-category-${title.toLowerCase()}`}>
@@ -81,7 +82,7 @@ function SkillCategory({ title, skills }: { title: string; skills: Array<{ name:
             style={{ animationDelay: `${index * 0.05}s` }}
             data-testid={`card-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
           >
-            <skill.icon className="w-10 h-10 group-hover:scale-110 transition-transform duration-300 ease-out" style={{ color: skill.color }} />
+            <skill.icon className="w-10 h-10 group-hover:scale-110 transition-transform duration-300 ease-out" />
             <span className="text-xs text-center text-muted-foreground">{skill.name}</span>
           </Card>
         ))}
