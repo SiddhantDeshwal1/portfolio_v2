@@ -231,3 +231,21 @@ export const GooglegeminiIcon = () => (
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 15L3 13.75V9.5l7.5 4.25v4.25zm3 0v-4.25L21 13.75V9.5l-7.5 4.25v4.25zM4.5 8.25L12 4l7.5 4.25L12 12.5z" fill="#8E44AD"/>
   </svg>
 );
+
+export const ArchlinuxIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.01 15.5l-3.49-3.49 1.41-1.41 2.08 2.08 5.66-5.66 1.41 1.41z" fill="#1793D1"/>
+  </svg>
+);
+
+export const NeovimIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2l-10 18h20L12 2zm0 3.84L17.22 19H6.78L12 5.84z" fill="#5A9148"/>
+  </svg>
+);
+
+export const HyprlandIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2L2 7v10l10 5 10-5V7l-10-5zM4 8.24v7.52l8 4v-7.52l-8-4zM12 19.76V12.24l8-4v7.52l-8 4zM11 11.11l-3-1.5L11 8.11l3 1.5z" fill="#00A1DE"/>
+  </svg>
+);

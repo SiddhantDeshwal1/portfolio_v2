@@ -10,6 +10,8 @@ import {
   SiFastapi, SiDjango, SiPostgresql, SiDrizzle, SiPython, 
   SiJavascript, SiTypescript, SiLinux, SiDocker, SiGit 
 } from 'react-icons/si';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const techStack = [
   { name: 'JavaScript (ES6+)', icon: SiJavascript },
@@ -29,7 +31,44 @@ const techStack = [
   { name: 'Git', icon: SiGit },
 ];
 
+const images = [
+  "https://via.placeholder.com/1280x720.png/000/fff?text=Image+1",
+  "https://via.placeholder.com/1280x720.png/000/fff?text=Image+2",
+  "https://via.placeholder.com/1280x720.png/000/fff?text=Image+3",
+];
+
+const slideVariants = {
+  enter: (direction: number) => {
+    return {
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+  exit: (direction: number) => {
+    return {
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+};
+
 export default function AboutSection() {
+  const [[page, direction], setPage] = useState([0, 0]);
+  const imageIndex = ((page % images.length) + images.length) % images.length;
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPage([page + 1, 1]);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [page]);
+
   return (
     <section id="about" className="min-h-screen flex items-center justify-center px-4 py-24" data-testid="section-about">
       <div className="max-w-4xl mx-auto w-full space-y-8 fade-in">
@@ -85,7 +124,24 @@ export default function AboutSection() {
             </div>
           </div>
         </Card>
-        <div className="w-full h-64 bg-gray-700 animate-pulse" data-testid="image-placeholder"></div>
+        <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
+          <AnimatePresence initial={false} custom={direction}>
+            <motion.img
+              key={page}
+              src={images[imageIndex]}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              className="absolute w-full h-full object-cover"
+            />
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

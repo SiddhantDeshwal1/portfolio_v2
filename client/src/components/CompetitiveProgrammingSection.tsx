@@ -53,6 +53,8 @@ export default function CompetitiveProgrammingSection() {
           </h2>
         </div>
 
+        <div className="w-full h-64 bg-gray-700 animate-pulse" data-testid="image-placeholder"></div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {platforms.map((platform, index) => (
             <Card 

@@ -1,15 +1,16 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { SiArchlinux, SiGnubash, SiNeovim, SiGithub } from 'react-icons/si';
+import {
+  ArchlinuxIcon, BashIcon, NeovimIcon, HyprlandIcon, GithubIcon
+} from './icons';
 import { FaDisplay } from 'react-icons/fa6';
 import { BsTerminalFill, BsFillPlayCircleFill } from 'react-icons/bs';
-import { GrCluster } from 'react-icons/gr';
 
 const setupIcons = [
-  { name: 'Arch Linux', icon: SiArchlinux, color: 'text-blue-500' },
-  { name: 'Bash', icon: SiGnubash, color: 'text-green-500' },
-  { name: 'Neovim', icon: SiNeovim, color: 'text-green-600' },
-  { name: 'Hyprland', icon: GrCluster, color: 'text-cyan-500' },
+  { name: 'Arch Linux', icon: ArchlinuxIcon },
+  { name: 'Bash', icon: BashIcon },
+  { name: 'Neovim', icon: NeovimIcon },
+  { name: 'Hyprland', icon: HyprlandIcon },
 ];
 
 export default function LinuxRicingSection() {
@@ -46,7 +47,7 @@ export default function LinuxRicingSection() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                   data-testid={`setup-icon-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                 >
-                  <item.icon className={`w-10 h-10 ${item.color}`} />
+                  <item.icon />
                   <span className="text-xs text-center text-muted-foreground">{item.name}</span>
                 </div>
               ))}
@@ -54,7 +55,7 @@ export default function LinuxRicingSection() {
 
             <div className="flex flex-wrap gap-4 pt-6">
               <Button variant="outline" className="border-primary/50" data-testid="button-dotfiles-repo">
-                <SiGithub className="w-4 h-4 mr-2" />
+                <GithubIcon />
                 Dotfiles Repo
               </Button>
               <Button variant="outline" className="border-primary/50" data-testid="button-setup-guide">
