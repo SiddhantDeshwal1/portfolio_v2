@@ -1,0 +1,116 @@
+PORTFOLIO WEBSITE PROMPT
+
+Build a personal portfolio website for Siddhant Deshwal, Software Engineer (SDE), competitive programmer, and backend systems developer.
+
+Overall Style
+
+– Dark, black-themed interface.
+– Subtle, smooth, modern animations.
+– Terminal-inspired aesthetic (glowing cursor, command-prompt headers, hacker-style transitions).
+– Pixel-art accents sprinkled throughout (small, tasteful elements, not overwhelming).
+– Heavy use of technical icons (languages, tools, CP platforms, social links, OS icons, editor icons).
+– Layout must feel clean, minimalist, fast, and professional.
+
+Sections & Content
+1. Landing / Hero Section
+
+Minimal, terminal-like greeting. Example:
+> Hello, I’m Siddhant_des.
+> Software Engineer • Backend Systems • Competitive Programmer
+
+Include a short animated subtitle cycling through:
+– “Backend & Systems Developer”
+– “Competitive Programmer (Top 5% LeetCode)”
+– “Scalable Architecture Enthusiast”
+– “Linux Ricer • I Use Arch btw”
+
+2. About Me (Expanded)
+
+Use this content and expand it into polished short paragraphs:
+
+Since childhood, Siddhant has been fascinated by how computers work beneath the surface. That early curiosity matured into a focused engineering mindset—understanding systems deeply, optimizing them, and building tools that genuinely make life easier.
+His strength lies in problem-solving, designing scalable backend architectures, and seeing a project through from raw idea to production-ready execution.
+He loves working with Linux, customizing entire environments, crafting dotfiles, and tuning his workflow for speed and clarity.
+He enjoys blending technical rigor with creativity—coding, competitive programming, and even pixel-art experiments.
+
+Include links/buttons for:
+– Dotfiles repo
+– Setup overview
+– Linux rice gallery
+– Short video of his Arch setup (placeholder)
+
+3. Skills Section
+
+Icons for everything, minimal text.
+
+Languages: C/C++, Python, Java, JS
+Frameworks: Spring/Spring Boot, Django, FastAPI, Node.js
+Tools: Linux, Git, Vim, VS Code, IntelliJ, PyCharm
+Specialties: Backend dev, system design, algorithms, CP, automation
+
+4. Competitive Programming Section
+
+Card-style layout with platform icons + photos/screenshots:
+
+– LeetCode (Knight, Top 5%) → include profile screenshot
+– Codeforces (Specialist 1444) → include profile screenshot
+– CodeChef (1759 / 3-Star) → screenshot
+– Contest peaks:
+• 153rd — CodeChef Starters 147
+• 1078th — CF Round 1020
+• 1210th — LeetCode Weekly 429
+
+Small pixel-art trophy or badge icons.
+
+5. Projects (Highlight-Only Cards)
+
+Short, tight, no long descriptions.
+
+CP Toolkit
+– Python, Bash, FastAPI
+– Live contest monitoring, local testing automation
+– Async scraping, 60% faster fetch, handles 10k+ req/sec
+– Link to GitHub
+(Include minimalistic graph/pulse animation)
+
+WorkChat
+– Django + PostgreSQL
+– Optimized storage, batching, indexing
+– 30% latency reduction, supports 50k+ daily active users
+– Link to GitHub
+(Subtle chat-bubble animation)
+
+6. Linux Ricing Section
+
+Terminal-like gallery showing:
+– Arch Linux
+– BSPWM/i3/Hyprland (whichever applies)
+– Your dotfiles repo
+– Theming overview
+– Video demo of your setup
+– Icons for distro, shell, WM, editor, terminal, etc.
+
+7. Contact Section
+
+Icons for:
+– Email
+– LinkedIn
+– GitHub
+– LeetCode
+– Codeforces
+– CodeChef
+
+Black-terminal theme:
+> connect --with siddhant
+
+8. Visual Aesthetic Extras
+
+– Pixel-art transitions
+– Glitch-free neon cursors
+– Subtle background noise texture
+– Occasional ASCII-style dividers
+– Smooth command-line animations between sections
+
+FINAL PROMPT (Copy-Paste Version)
+
+Create a black, terminal-themed, modern portfolio website for “Siddhant Deshwal — Software Engineer”. Use subtle futuristic animations, pixel-art accents, and many programming icons. The website must have a hacker-console aesthetic while remaining clean and professional. Include sections for: (1) hero intro with animated titles, (2) expanded About Me using the provided text, (3) skills with icons for languages, frameworks, and tools, (4) competitive programming section with screenshots/photos of LeetCode, Codeforces, and CodeChef profiles, (5) highlighted project cards for CP Toolkit and WorkChat with metrics, (6) Linux ricing gallery showcasing Arch Linux, dotfiles, setup overview, icons for distro/shell/editor, and a placeholder video, and (7) contact section with icons for email, LinkedIn, GitHub, and CP platforms. Aesthetic details: dark palette, neon cursor, smooth transitions, pixel-art elements, minimal text, and a terminal-like flow between sections.
