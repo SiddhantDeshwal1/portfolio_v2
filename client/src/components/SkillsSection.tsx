@@ -3,7 +3,7 @@ import {
   SiC, SiCplusplus, SiPython, SiJavascript, 
   SiSpring, SiDjango, SiFastapi, SiNodedotjs,
   SiLinux, SiGit, SiVim, SiIntellijidea, SiPycharm,
-  SiGnubash, SiHtml5, SiCss3
+  SiGnubash, SiHtml5, SiCss3, SiGithub
 } from 'react-icons/si';
 import { FaJava, FaBrain, FaCloud } from 'react-icons/fa';
 import { FaGears } from 'react-icons/fa6';
@@ -13,34 +13,35 @@ import { TbBrandVscode } from 'react-icons/tb';
 
 const skills = {
   languages: [
-    { name: 'C', icon: SiC },
-    { name: 'C++', icon: SiCplusplus },
-    { name: 'Java', icon: FaJava },
-    { name: 'Python', icon: SiPython },
-    { name: 'JavaScript', icon: SiJavascript },
-    { name: 'HTML5', icon: SiHtml5 },
-    { name: 'CSS3', icon: SiCss3 },
-    { name: 'Bash', icon: SiGnubash },
+    { name: 'C', icon: SiC, color: '#A8B9CC' },
+    { name: 'C++', icon: SiCplusplus, color: '#00599C' },
+    { name: 'Java', icon: FaJava, color: '#007396' },
+    { name: 'Python', icon: SiPython, color: '#3776AB' },
+    { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+    { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
+    { name: 'CSS3', icon: SiCss3, color: '#1572B6' },
+    { name: 'Bash', icon: SiGnubash, color: '#4EAA25' },
   ],
   frameworks: [
-    { name: 'Spring Boot', icon: SiSpring },
-    { name: 'Django', icon: SiDjango },
-    { name: 'FastAPI', icon: SiFastapi },
-    { name: 'Node.js', icon: SiNodedotjs },
+    { name: 'Spring Boot', icon: SiSpring, color: '#6DB33F' },
+    { name: 'Django', icon: SiDjango, color: '#092E20' },
+    { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
+    { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
   ],
   tools: [
-    { name: 'Linux', icon: SiLinux },
-    { name: 'Git', icon: SiGit },
-    { name: 'Vim', icon: SiVim },
-    { name: 'VS Code', icon: TbBrandVscode },
-    { name: 'IntelliJ', icon: SiIntellijidea },
-    { name: 'PyCharm', icon: SiPycharm },
+    { name: 'Linux', icon: SiLinux, color: '#FCC624' },
+    { name: 'Git', icon: SiGit, color: '#F05032' },
+    { name: 'GitHub', icon: SiGithub, color: '#181717' },
+    { name: 'Vim', icon: SiVim, color: '#019733' },
+    { name: 'VS Code', icon: TbBrandVscode, color: '#007ACC' },
+    { name: 'IntelliJ', icon: SiIntellijidea, color: '#000000' },
+    { name: 'PyCharm', icon: SiPycharm, color: '#000000' },
   ],
   specialties: [
-    { name: 'Backend Dev', icon: FaGears },
-    { name: 'System Design', icon: GrArchlinux },
-    { name: 'Algorithms', icon: FaBrain },
-    { name: 'Cloud', icon: FaCloud },
+    { name: 'Backend Dev', icon: FaGears, color: '#FFFFFF' },
+    { name: 'System Design', icon: GrArchlinux, color: '#1793D1' },
+    { name: 'Algorithms', icon: FaBrain, color: '#F9AC4F' },
+    { name: 'Cloud', icon: FaCloud, color: '#00A1DE' },
   ],
 };
 
@@ -71,7 +72,7 @@ export default function SkillsSection() {
   );
 }
 
-function SkillCategory({ title, skills }: { title: string; skills: Array<{ name: string; icon: any }> }) {
+function SkillCategory({ title, skills }: { title: string; skills: Array<{ name: string; icon: any, color: string }> }) {
   return (
     <div className="space-y-6 scale-in">
       <h3 className="text-xl md:text-2xl font-semibold text-primary/80" data-testid={`text-category-${title.toLowerCase()}`}>
@@ -85,7 +86,7 @@ function SkillCategory({ title, skills }: { title: string; skills: Array<{ name:
             style={{ animationDelay: `${index * 0.05}s` }}
             data-testid={`card-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
           >
-            <skill.icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform duration-300 ease-out" />
+            <skill.icon className="w-10 h-10 group-hover:scale-110 transition-transform duration-300 ease-out" style={{ color: skill.color }} />
             <span className="text-xs text-center text-muted-foreground">{skill.name}</span>
           </Card>
         ))}

@@ -1,48 +1,42 @@
 import { Card } from '@/components/ui/card';
-import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 import { SiLeetcode, SiCodeforces, SiCodechef } from 'react-icons/si';
 
 const contactLinks = [
-  { 
-    name: 'Email', 
-    icon: Mail, 
-    href: 'mailto:siddhant@example.com',
+  {
+    name: 'Email',
+    icon: Mail,
+    href: 'mailto:siddhantdeshwalwork@gmail.com',
     color: 'hover:text-red-500'
   },
-  { 
-    name: 'Twitter', 
-    icon: Twitter, 
-    href: 'https://twitter.com/siddhantdeshwal',
-    color: 'hover:text-sky-500'
-  },
-  { 
-    name: 'LinkedIn', 
-    icon: Linkedin, 
-    href: '#',
+  {
+    name: 'LinkedIn',
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/in/siddhant-deshwal-639948144/',
     color: 'hover:text-blue-500'
   },
-  { 
-    name: 'GitHub', 
-    icon: Github, 
-    href: '#',
+  {
+    name: 'GitHub',
+    icon: Github,
+    href: 'https://github.com/SiddhantDeshwal1',
     color: 'hover:text-purple-500'
   },
-  { 
-    name: 'LeetCode', 
-    icon: SiLeetcode, 
-    href: '#',
+  {
+    name: 'LeetCode',
+    icon: SiLeetcode,
+    href: 'https://leetcode.com/u/siddhantdeshwal/',
     color: 'hover:text-yellow-500'
   },
-  { 
-    name: 'Codeforces', 
-    icon: SiCodeforces, 
-    href: '#',
+  {
+    name: 'Codeforces',
+    icon: SiCodeforces,
+    href: 'https://codeforces.com/profile/worthNothing',
     color: 'hover:text-cyan-500'
   },
-  { 
-    name: 'CodeChef', 
-    icon: SiCodechef, 
-    href: '#',
+  {
+    name: 'CodeChef',
+    icon: SiCodechef,
+    href: 'https://www.codechef.com/users/just_lie',
     color: 'hover:text-amber-600'
   },
 ];

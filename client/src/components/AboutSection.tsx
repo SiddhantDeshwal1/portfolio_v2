@@ -85,6 +85,7 @@ export default function AboutSection() {
             </div>
           </div>
         </Card>
+        <div className="w-full h-64 bg-gray-700 animate-pulse" data-testid="image-placeholder"></div>
       </div>
     </section>
   );

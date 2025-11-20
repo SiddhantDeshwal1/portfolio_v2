@@ -12,77 +12,21 @@ const setupIcons = [
   { name: 'Hyprland', icon: GrCluster, color: 'text-cyan-500' },
 ];
 
-const neofetchOutput = `
-                   -Siddhant
-                  .o+
-                 \
-                \
-               \
-               -+
-             \
-            \
-           \
-          \
-         ./ooosssso++osssssso+
-        .oossssso-    \
-       -osssssso.      :so##sl-
-      :osssssss/        ##sso:
-     .ossssssss/       .sso:
-     /ossssssss/        sso-
-     /ossssssss/        /sso.
-     .osssssssso/         so:
-     .osssso++osssso-      /sso.
-      .osssso- .osssso:      /sso.
-       .osssso-   osssso+:    /sso.
-        -osssso-   .+osssso+-   /sso.
-         -osssso-     /sossso+-  /sso.
-          .+osssso-       /sossso+- /sso.
-           ./osssso-         /sossso+-/sso.
-            ./osssso-           /sossso+/so.
-             ./osssso-             /sossso+/s-
-              ./osssso-               /sossso+/so.
-               ./osssso-                 /sossso+/s-
-                ./osssso-                   /sossso+/so
-                 ./osssso-                     /sossso+/s-
-                  ./osssso-                       /sossso+/so.
-                   ./osssso-                         /sossso+/s-
-                    ./osssso-                           /sossso+/so-
-                     ./osssso-                             /sossso+/
-                      -osssso-                               /sossso+-
-                       -osssso-                                 /sossso+-
-                        -osssso-                                   /sossso+-
-                         -osssso-                                     /sossso+-
-                          -osssso-                                       /sossso+-
-                           -osssso-                                         /sossso+-
-                            -osssso-                                           /sossso+-
-                             -osssso-                                             /sossso+-
-                              -osssso-                                               /sossso+-
-                               -osssso-                                                 /sossso+-
-                                -osssso-                                                   /sossso+-
-                                 -osssso-                                                     /sossso+-
-                                  -osssso-                                                       /sossso+-
-                                   -osssso-                                                         /sossso+-
-                                    -osssso-                                                           /sossso+-
-                                     -osssso-                                                             /sossso+-
-                                      -osssso-                                                               /sossso+-
-                                       -osssso-                                                                 /sossso+-
-                                        -osssso-                                                                   /sossso+-
-                                         -osssso-                                                                     /sossso+-
-                                          -osssso-                                                                       /sossso+-
-                                           -osssso-                                                                         /sossso+-
-                                            -osssso-                                                                           /sossso+-
-                                             -osssso-                                                                             /sossso+-
-                                              -osssso-                                                                               /sossso+-
-`;
-
-const cowsayOutput = `
-  < I use Arch btw />
-   ----------------
-          \   ^__^
-           \  (oo)\л_______
-              (__)\       )\/\
-                  ||----w |
-                  ||     ||
+const cmatrixOutput = `
+Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z
+z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z
+Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z
+z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z
+Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z
+z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z
+Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z
+z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z
+Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z
+z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z
+Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z
+z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z
+Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z
+z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z z Z
 `;
 
 
@@ -92,7 +36,7 @@ export default function LinuxRicingSection() {
       <div className="max-w-6xl mx-auto w-full space-y-12 fade-in">
         <div className="space-y-2">
           <div className="text-sm text-primary/60 font-mono">
-            <span className="text-primary">$</span> neofetch | cowsay
+            <span className="text-primary">$</span> cmatrix
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-primary glow-text" data-testid="text-linux-header">
             rice_details.txt
@@ -138,19 +82,13 @@ export default function LinuxRicingSection() {
             </div>
           </Card>
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-1 gap-6">
             <Card 
               className="aspect-video border-primary/30 bg-black backdrop-blur-sm hover-elevate flex items-center justify-center overflow-hidden relative group scale-in p-4"
-              data-testid="card-neofetch">
+              data-testid="card-cmatrix"
+            >
               <pre className="text-xs text-primary font-mono whitespace-pre-wrap">
-                {neofetchOutput}
-              </pre>
-            </Card>
-            <Card 
-              className="aspect-video border-primary/30 bg-black backdrop-blur-sm hover-elevate flex items-center justify-center overflow-hidden relative group scale-in p-4"
-              data-testid="card-cowsay">
-              <pre className="text-xs text-primary font-mono whitespace-pre-wrap">
-                {cowsayOutput}
+                {cmatrixOutput}
               </pre>
             </Card>
           </div>
@@ -166,7 +104,8 @@ export default function LinuxRicingSection() {
                   className="w-full h-full"
                   controls
                   poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect width='1920' height='1080' fill='%23000'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='48' fill='%2339ff14'%3E▶ Setup Demo Video%3C/text%3E%3C/svg%3E"
-                  data-testid="video-setup-demo">
+                  data-testid="video-setup-demo"
+                >
                   <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
