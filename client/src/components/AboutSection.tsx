@@ -1,4 +1,33 @@
 import { Card } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { 
+  SiReact, SiVite, SiTailwindcss, SiNodedotjs, SiExpress, 
+  SiFastapi, SiDjango, SiPostgresql, SiDrizzle, SiPython, 
+  SiJavascript, SiTypescript, SiLinux, SiDocker, SiGit 
+} from 'react-icons/si';
+
+const techStack = [
+  { name: 'JavaScript (ES6+)', icon: SiJavascript },
+  { name: 'TypeScript', icon: SiTypescript },
+  { name: 'Python', icon: SiPython },
+  { name: 'React', icon: SiReact },
+  { name: 'Node.js', icon: SiNodedotjs },
+  { name: 'Express', icon: SiExpress },
+  { name: 'FastAPI', icon: SiFastapi },
+  { name: 'Django', icon: SiDjango },
+  { name: 'PostgreSQL', icon: SiPostgresql },
+  { name: 'Drizzle ORM', icon: SiDrizzle },
+  { name: 'Tailwind CSS', icon: SiTailwindcss },
+  { name: 'Vite', icon: SiVite },
+  { name: 'Linux', icon: SiLinux },
+  { name: 'Docker', icon: SiDocker },
+  { name: 'Git', icon: SiGit },
+];
 
 export default function AboutSection() {
   return (
@@ -32,6 +61,28 @@ export default function AboutSection() {
               for speed and clarity. Whether it's coding, competitive programming, or pixel-art experiments, I blend 
               technical precision with creativity.
             </p>
+
+            <Separator className="bg-primary/20" />
+
+            <div className="space-y-4">
+              <h3 className="text-lg md:text-xl font-semibold text-primary/80" data-testid="text-tech-stack-header">
+                My Go-To Tech
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                {techStack.map((tech) => (
+                  <Tooltip key={tech.name}>
+                    <TooltipTrigger>
+                      <div className="text-muted-foreground hover:text-primary transition-colors">
+                        <tech.icon className="w-8 h-8" />
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{tech.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                ))}
+              </div>
+            </div>
           </div>
         </Card>
       </div>

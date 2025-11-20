@@ -1,8 +1,9 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Github, TrendingUp, MessageSquare } from 'lucide-react';
-import { SiPython, SiFastapi, SiDjango, SiPostgresql } from 'react-icons/si';
+import { SiPython, SiFastapi, SiDjango, SiPostgresql, SiGithub } from 'react-icons/si';
+import { IoAnalyticsSharp } from 'react-icons/io5';
+import { BsChatSquareQuoteFill } from 'react-icons/bs';
 
 const projects = [
   {
@@ -19,7 +20,7 @@ const projects = [
       'Handles 10k+ req/sec',
       'Real-time contest updates'
     ],
-    icon: TrendingUp,
+    icon: IoAnalyticsSharp,
     link: '#',
   },
   {
@@ -36,7 +37,7 @@ const projects = [
       '50k+ daily active users',
       'Real-time messaging'
     ],
-    icon: MessageSquare,
+    icon: BsChatSquareQuoteFill,
     link: '#',
   },
 ];
@@ -108,7 +109,7 @@ export default function ProjectsSection() {
                 className="w-full border-primary/50"
                 data-testid={`button-github-${project.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
-                <Github className="w-4 h-4 mr-2" />
+                <SiGithub className="w-4 h-4 mr-2" />
                 View on GitHub
               </Button>
             </Card>

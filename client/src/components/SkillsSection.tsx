@@ -1,17 +1,25 @@
 import { Card } from '@/components/ui/card';
 import { 
-  SiCplusplus, SiPython, SiJavascript, 
+  SiC, SiCplusplus, SiPython, SiJavascript, 
   SiSpring, SiDjango, SiFastapi, SiNodedotjs,
-  SiLinux, SiGit, SiVim, SiIntellijidea, SiPycharm
+  SiLinux, SiGit, SiVim, SiIntellijidea, SiPycharm,
+  SiGnubash, SiHtml5, SiCss3, SiVisualstudiocode
 } from 'react-icons/si';
-import { Code2, Database, Cpu, Zap, Code, FileCode } from 'lucide-react';
+import { FaJava, FaBrain, FaCloud } from 'react-icons/fa';
+import { FaGears } from 'react-icons/fa6';
+import { GrArchlinux } from 'react-icons/gr';
+
 
 const skills = {
   languages: [
-    { name: 'C/C++', icon: SiCplusplus },
+    { name: 'C', icon: SiC },
+    { name: 'C++', icon: SiCplusplus },
+    { name: 'Java', icon: FaJava },
     { name: 'Python', icon: SiPython },
     { name: 'JavaScript', icon: SiJavascript },
-    { name: 'Java', icon: Code2 },
+    { name: 'HTML5', icon: SiHtml5 },
+    { name: 'CSS3', icon: SiCss3 },
+    { name: 'Bash', icon: SiGnubash },
   ],
   frameworks: [
     { name: 'Spring Boot', icon: SiSpring },
@@ -23,15 +31,15 @@ const skills = {
     { name: 'Linux', icon: SiLinux },
     { name: 'Git', icon: SiGit },
     { name: 'Vim', icon: SiVim },
-    { name: 'VS Code', icon: Code },
+    { name: 'VS Code', icon: SiVisualstudiocode },
     { name: 'IntelliJ', icon: SiIntellijidea },
     { name: 'PyCharm', icon: SiPycharm },
   ],
   specialties: [
-    { name: 'Backend Dev', icon: Code2 },
-    { name: 'System Design', icon: Database },
-    { name: 'Algorithms', icon: Cpu },
-    { name: 'Cloud', icon: Zap },
+    { name: 'Backend Dev', icon: FaGears },
+    { name: 'System Design', icon: GrArchlinux },
+    { name: 'Algorithms', icon: FaBrain },
+    { name: 'Cloud', icon: FaCloud },
   ],
 };
 

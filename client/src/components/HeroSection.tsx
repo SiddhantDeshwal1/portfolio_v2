@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BsArrowDownCircleFill } from 'react-icons/bs';
 
 const taglines = [
   "Competitive programmer",
@@ -81,9 +82,7 @@ export default function HeroSection() {
         <div className="pt-8">
           <a href="#about" data-testid="link-scroll-down">
             <div className="inline-block text-primary animate-bounce">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
+              <BsArrowDownCircleFill className="w-8 h-8" />
             </div>
           </a>
         </div>
