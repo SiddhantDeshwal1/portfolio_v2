@@ -2,19 +2,19 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
   SiOpenai, SiAnthropic, SiFigma, SiCanva,
-  SiReplit, SiPerplexity
+  SiReplit, SiPerplexity, SiGooglegemini
 } from 'react-icons/si';
 import { Wand2, Code2, Cpu, Sparkles } from 'lucide-react';
 
 const aiTools = [
   { name: 'Cursor', icon: Code2, description: 'AI-powered IDE', color: '#171717' },
   { name: 'GPT-4', icon: SiOpenai, description: 'Advanced reasoning', color: '#74AA9C' },
+  { name: 'Gemini', icon: SiGooglegemini, description: 'Google\'s LLM', color: '#8E44AD' },
   { name: 'Claude', icon: SiAnthropic, description: 'Long context', color: '#D97A55' },
   { name: 'Perplexity', icon: SiPerplexity, description: 'Research assistant', color: '#000000' },
   { name: 'Replit', icon: SiReplit, description: 'AI development', color: '#F26207' },
   { name: 'Figma', icon: SiFigma, description: 'Design tool', color: '#F24E1E' },
   { name: 'Canva', icon: SiCanva, description: 'Visual design', color: '#00C4CC' },
-  { name: 'Picwish', icon: Wand2, description: 'Image editing', color: '#FFFFFF' },
 ];
 
 export default function AISkillsSection() {

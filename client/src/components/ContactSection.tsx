@@ -1,43 +1,44 @@
 import { Card } from '@/components/ui/card';
-import { Mail, Linkedin, Github } from 'lucide-react';
-import { SiLeetcode, SiCodeforces, SiCodechef } from 'react-icons/si';
+import { 
+  SiGmail, SiLinkedin, SiGithub, SiLeetcode, SiCodeforces, SiCodechef 
+} from 'react-icons/si';
 
 const contactLinks = [
-  {
-    name: 'Email',
-    icon: Mail,
+  { 
+    name: 'Gmail', 
+    icon: SiGmail, 
     href: 'mailto:siddhantdeshwalwork@gmail.com',
-    color: 'hover:text-red-500'
+    color: '#EA4335'
   },
-  {
-    name: 'LinkedIn',
-    icon: Linkedin,
+  { 
+    name: 'LinkedIn', 
+    icon: SiLinkedin, 
     href: 'https://www.linkedin.com/in/siddhant-deshwal-639948144/',
-    color: 'hover:text-blue-500'
+    color: '#0A66C2'
   },
-  {
-    name: 'GitHub',
-    icon: Github,
+  { 
+    name: 'GitHub', 
+    icon: SiGithub, 
     href: 'https://github.com/SiddhantDeshwal1',
-    color: 'hover:text-purple-500'
+    color: '#FFFFFF'
   },
-  {
-    name: 'LeetCode',
-    icon: SiLeetcode,
+  { 
+    name: 'LeetCode', 
+    icon: SiLeetcode, 
     href: 'https://leetcode.com/u/siddhantdeshwal/',
-    color: 'hover:text-yellow-500'
+    color: '#FFA116'
   },
-  {
-    name: 'Codeforces',
-    icon: SiCodeforces,
+  { 
+    name: 'Codeforces', 
+    icon: SiCodeforces, 
     href: 'https://codeforces.com/profile/worthNothing',
-    color: 'hover:text-cyan-500'
+    color: '#4F89C1'
   },
-  {
-    name: 'CodeChef',
-    icon: SiCodechef,
+  { 
+    name: 'CodeChef', 
+    icon: SiCodechef, 
     href: 'https://www.codechef.com/users/just_lie',
-    color: 'hover:text-amber-600'
+    color: '#684D42'
   },
 ];
 
@@ -67,7 +68,7 @@ export default function ContactSection() {
                 data-testid={`link-${link.name.toLowerCase()}`}
               >
                 <div className="flex flex-col items-center gap-4 p-6 rounded-md border border-primary/20 hover-elevate active-elevate-2 transition-all duration-300">
-                  <link.icon className={`w-12 h-12 text-primary group-hover:scale-110 transition-transform duration-300 ${link.color}`} />
+                  <link.icon className="w-12 h-12" style={{ color: link.color }}/>
                   <span className="text-sm text-muted-foreground">{link.name}</span>
                 </div>
               </a>
