@@ -2,16 +2,30 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
   SiOpenai, SiAnthropic, SiFigma, SiCanva,
-  SiReplit, SiPerplexity, SiGooglegemini
+  SiReplit, SiGooglegemini
 } from 'react-icons/si';
 import { Wand2, Code2, Cpu, Sparkles } from 'lucide-react';
 
+const PerplexityIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="black"/>
+    <path d="M16.0001 8.94116V14.1176H21.1766" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M16 23.0588V14.1176H10.8235" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const CursorIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.75 2.25L3 18.75L9.75 17.25L12 22.5L18.75 5.25L14.25 9L9.75 2.25Z" fill="black" stroke="black" strokeWidth="1.5" strokeLinejoin="round"/>
+  </svg>
+);
+
 const aiTools = [
-  { name: 'Cursor', icon: Code2, description: 'AI-powered IDE', color: '#171717' },
+  { name: 'Cursor', icon: CursorIcon, description: 'AI-powered IDE', color: '#000000' },
   { name: 'GPT-4', icon: SiOpenai, description: 'Advanced reasoning', color: '#74AA9C' },
   { name: 'Gemini', icon: SiGooglegemini, description: 'Google\'s LLM', color: '#8E44AD' },
   { name: 'Claude', icon: SiAnthropic, description: 'Long context', color: '#D97A55' },
-  { name: 'Perplexity', icon: SiPerplexity, description: 'Research assistant', color: '#000000' },
+  { name: 'Perplexity', icon: PerplexityIcon, description: 'Research assistant', color: '#000000' },
   { name: 'Replit', icon: SiReplit, description: 'AI development', color: '#F26207' },
   { name: 'Figma', icon: SiFigma, description: 'Design tool', color: '#F24E1E' },
   { name: 'Canva', icon: SiCanva, description: 'Visual design', color: '#00C4CC' },
