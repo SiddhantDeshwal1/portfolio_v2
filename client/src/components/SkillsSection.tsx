@@ -1,13 +1,14 @@
 import { Card } from '@/components/ui/card';
-import { 
+import {
   SiC, SiCplusplus, SiPython, SiJavascript, 
   SiSpring, SiDjango, SiFastapi, SiNodedotjs,
   SiLinux, SiGit, SiVim, SiIntellijidea, SiPycharm,
-  SiGnubash, SiHtml5, SiCss3, SiVisualstudiocode
+  SiGnubash, SiHtml5, SiCss3
 } from 'react-icons/si';
 import { FaJava, FaBrain, FaCloud } from 'react-icons/fa';
 import { FaGears } from 'react-icons/fa6';
 import { GrArchlinux } from 'react-icons/gr';
+import { TbBrandVscode } from 'react-icons/tb';
 
 
 const skills = {
@@ -31,7 +32,7 @@ const skills = {
     { name: 'Linux', icon: SiLinux },
     { name: 'Git', icon: SiGit },
     { name: 'Vim', icon: SiVim },
-    { name: 'VS Code', icon: SiVisualstudiocode },
+    { name: 'VS Code', icon: TbBrandVscode },
     { name: 'IntelliJ', icon: SiIntellijidea },
     { name: 'PyCharm', icon: SiPycharm },
   ],
