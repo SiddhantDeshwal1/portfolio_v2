@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowDownCircleIcon } from './icons';
+import { BsArrowDownCircleFill } from 'react-icons/bs';
 
 const taglines = [
   "Competitive programmer",
@@ -82,7 +82,7 @@ export default function HeroSection() {
         <div className="pt-8">
           <a href="#about" data-testid="link-scroll-down">
             <div className="inline-block text-primary animate-bounce">
-              <ArrowDownCircleIcon />
+              <img src="/icons/arrow-down-circle.svg" alt="Scroll Down" className="w-8 h-8" />
             </div>
           </a>
         </div>

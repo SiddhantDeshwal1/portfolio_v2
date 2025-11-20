@@ -1,45 +1,61 @@
 import { Card } from '@/components/ui/card';
-import {
-  JavaIcon, PythonIcon, JavascriptIcon, Html5Icon, Css3Icon, BashIcon, SpringBootIcon,
-  DjangoIcon, FastApiIcon, NodejsIcon, LinuxIcon, GitIcon, GithubIcon, VimIcon, VscodeIcon,
-  IntellijIcon, PycharmIcon, BackendIcon, SystemDesignIcon, AlgorithmsIcon, CloudIcon,
-  CIcon, CppIcon
-} from './icons';
-
 
 const skills = {
   languages: [
-    { name: 'C', icon: CIcon },
-    { name: 'C++', icon: CppIcon },
-    { name: 'Java', icon: JavaIcon },
-    { name: 'Python', icon: PythonIcon },
-    { name: 'JavaScript', icon: JavascriptIcon },
-    { name: 'HTML5', icon: Html5Icon },
-    { name: 'CSS3', icon: Css3Icon },
-    { name: 'Bash', icon: BashIcon },
+    { name: 'C', icon: '/icons/c.png' },
+    { name: 'C++', icon: '/icons/cpp.png' },
+    { name: 'Java', icon: '/icons/java.svg' },
+    { name: 'Python', icon: '/icons/python.webp' },
+    { name: 'JavaScript', icon: '/icons/javascript.jpg' },
+    { name: 'HTML5', icon: '/icons/html.png' },
+    { name: 'CSS3', icon: '/icons/css.png' },
+    { name: 'Bash', icon: '/icons/bash.svg' },
   ],
   frameworks: [
-    { name: 'Spring Boot', icon: SpringBootIcon },
-    { name: 'Django', icon: DjangoIcon },
-    { name: 'FastAPI', icon: FastApiIcon },
-    { name: 'Node.js', icon: NodejsIcon },
+    { name: 'Spring Boot', icon: '/icons/springBoot.png' },
+    { name: 'Django', icon: '/icons/django.png' },
+    { name: 'FastAPI', icon: '/icons/fastapi.png' },
+    { name: 'Node.js', icon: '/icons/nodejs.png' },
   ],
   tools: [
-    { name: 'Linux', icon: LinuxIcon },
-    { name: 'Git', icon: GitIcon },
-    { name: 'GitHub', icon: GithubIcon },
-    { name: 'Vim', icon: VimIcon },
-    { name: 'VS Code', icon: VscodeIcon },
-    { name: 'IntelliJ', icon: IntellijIcon },
-    { name: 'PyCharm', icon: PycharmIcon },
+    { name: 'Linux', icon: '/icons/linux.jpg' },
+    { name: 'Git', icon: '/icons/git.png' },
+    { name: 'GitHub', icon: '/icons/github.png' },
+    { name: 'Vim', icon: '/icons/Vimlogo.svg' },
+    { name: 'VS Code', icon: '/icons/vscode.png' },
+    { name: 'IntelliJ', icon: '/icons/IntelliJ_IDEA_Icon.svg.png' },
+    { name: 'PyCharm', icon: '/icons/pycharm.png' },
   ],
   specialties: [
-    { name: 'Backend Dev', icon: BackendIcon },
-    { name: 'System Design', icon: SystemDesignIcon },
-    { name: 'Algorithms', icon: AlgorithmsIcon },
-    { name: 'Cloud', icon: CloudIcon },
+    { name: 'Backend Dev', icon: '/icons/Backend.svg' },
+    { name: 'System Design', icon: '/icons/SystemDesign.svg' },
+    { name: 'Algorithms', icon: '/icons/Algorithms.svg' },
+    { name: 'Cloud', icon: '/icons/Cloud.svg' },
   ],
 };
+
+function SkillCategory({ title, skills }: { title: string; skills: Array<{ name: string; icon: string }> }) {
+  return (
+    <div className="space-y-6 scale-in">
+      <h3 className="text-xl md:text-2xl font-semibold text-primary/80" data-testid={`text-category-${title.toLowerCase()}`}>
+        {title}
+      </h3>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        {skills.map((skill, index) => (
+          <Card
+            key={skill.name}
+            className="p-6 flex flex-col items-center justify-center gap-3 border-primary/20 bg-card/30 backdrop-blur-sm hover-elevate cursor-pointer group scale-in"
+            style={{ animationDelay: `${index * 0.05}s` }}
+            data-testid={`card-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
+          >
+            <img src={skill.icon} alt={skill.name} className="w-10 h-10 group-hover:scale-110 transition-transform duration-300 ease-out" />
+            <span className="text-xs text-center text-muted-foreground">{skill.name}</span>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function SkillsSection() {
   return (
@@ -65,28 +81,5 @@ export default function SkillsSection() {
         </div>
       </div>
     </section>
-  );
-}
-
-function SkillCategory({ title, skills }: { title: string; skills: Array<{ name: string; icon: any }> }) {
-  return (
-    <div className="space-y-6 scale-in">
-      <h3 className="text-xl md:text-2xl font-semibold text-primary/80" data-testid={`text-category-${title.toLowerCase()}`}>
-        {title}
-      </h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-        {skills.map((skill, index) => (
-          <Card 
-            key={skill.name} 
-            className="p-6 flex flex-col items-center justify-center gap-3 border-primary/20 bg-card/30 backdrop-blur-sm hover-elevate cursor-pointer group scale-in"
-            style={{ animationDelay: `${index * 0.05}s` }}
-            data-testid={`card-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
-          >
-            <skill.icon className="w-10 h-10 group-hover:scale-110 transition-transform duration-300 ease-out" />
-            <span className="text-xs text-center text-muted-foreground">{skill.name}</span>
-          </Card>
-        ))}
-      </div>
-    </div>
   );
 }

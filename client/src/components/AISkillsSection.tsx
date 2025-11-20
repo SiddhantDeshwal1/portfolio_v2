@@ -1,20 +1,16 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import {
-  OpenAiIcon, AnthropicIcon, FigmaIcon, CanvaIcon, ReplitIcon,
-  CursorIcon, PerplexityIcon, GooglegeminiIcon
-} from './icons';
 import { Wand2, Code2, Cpu, Sparkles } from 'lucide-react';
 
 const aiTools = [
-  { name: 'Cursor', icon: CursorIcon, description: 'AI-powered IDE' },
-  { name: 'GPT-4', icon: OpenAiIcon, description: 'Advanced reasoning' },
-  { name: 'Gemini', icon: GooglegeminiIcon, description: 'Google\'s LLM' },
-  { name: 'Claude', icon: AnthropicIcon, description: 'Long context' },
-  { name: 'Perplexity', icon: PerplexityIcon, description: 'Research assistant' },
-  { name: 'Replit', icon: ReplitIcon, description: 'AI development' },
-  { name: 'Figma', icon: FigmaIcon, description: 'Design tool' },
-  { name: 'Canva', icon: CanvaIcon, description: 'Visual design' },
+  { name: 'Cursor', icon: '/icons/cursorAI.png', description: 'AI-powered IDE' },
+  { name: 'GPT-4', icon: '/icons/chatgpt.jpg', description: 'Advanced reasoning' },
+  { name: 'Gemini', icon: '/icons/gemini.jpg', description: 'Google\'s LLM' },
+  { name: 'Claude', icon: '/icons/claude .svg', description: 'Long context' },
+  { name: 'Perplexity', icon: '/icons/perplexity.png', description: 'Research assistant' },
+  { name: 'Replit', icon: '/icons/replit.avif', description: 'AI development' },
+  { name: 'Figma', icon: '/icons/Figma-Logo.png', description: 'Design tool' },
+  { name: 'Canva', icon: '/icons/canva.png', description: 'Visual design' },
 ];
 
 export default function AISkillsSection() {
@@ -66,7 +62,7 @@ export default function AISkillsSection() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <tool.icon className="w-8 h-8" />
+                    <img src={tool.icon} alt={tool.name} className="w-8 h-8" />
                     <Badge variant="outline" className="border-primary/50 text-xs">
                       {tool.name}
                     </Badge>

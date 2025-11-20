@@ -1,37 +1,34 @@
 import { Card } from '@/components/ui/card';
-import { 
-  GmailIcon, LinkedinIcon, GithubIcon, LeetcodeIcon, CodeforcesIcon, CodechefIcon 
-} from './icons';
 
 const contactLinks = [
-  {
+  { 
     name: 'Gmail', 
-    icon: GmailIcon, 
+    icon: '/icons/mail.webp', 
     href: 'mailto:siddhantdeshwalwork@gmail.com',
   },
-  {
+  { 
     name: 'LinkedIn', 
-    icon: LinkedinIcon, 
+    icon: '/icons/linkedin.png', 
     href: 'https://www.linkedin.com/in/siddhant-deshwal-639948144/',
   },
-  {
+  { 
     name: 'GitHub', 
-    icon: GithubIcon, 
+    icon: '/icons/github.png', 
     href: 'https://github.com/SiddhantDeshwal1',
   },
-  {
+  { 
     name: 'LeetCode', 
-    icon: LeetcodeIcon, 
+    icon: '/icons/leetcode.webp', 
     href: 'https://leetcode.com/u/siddhantdeshwal/',
   },
-  {
+  { 
     name: 'Codeforces', 
-    icon: CodeforcesIcon, 
+    icon: '/icons/codeforces.png', 
     href: 'https://codeforces.com/profile/worthNothing',
   },
-  {
+  { 
     name: 'CodeChef', 
-    icon: CodechefIcon, 
+    icon: '/icons/codechef.png', 
     href: 'https://www.codechef.com/users/just_lie',
   },
 ];
@@ -62,7 +59,7 @@ export default function ContactSection() {
                 data-testid={`link-${link.name.toLowerCase()}`}
               >
                 <div className="flex flex-col items-center gap-4 p-6 rounded-md border border-primary/20 hover-elevate active-elevate-2 transition-all duration-300">
-                  <link.icon className="w-12 h-12"/>
+                  <img src={link.icon} alt={link.name} className="w-12 h-12"/>
                   <span className="text-sm text-muted-foreground">{link.name}</span>
                 </div>
               </a>
