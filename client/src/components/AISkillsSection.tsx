@@ -1,17 +1,20 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { SiOpenai, SiAnthropic, SiFigma, SiCanva } from 'react-icons/si';
-import { Sparkles, Code2, Cpu, Search, Wand2 } from 'lucide-react';
+import { 
+  SiOpenai, SiAnthropic, SiFigma, SiCanva,
+  SiReplit, SiPerplexity
+} from 'react-icons/si';
+import { Wand2, Code2, Cpu, Sparkles } from 'lucide-react';
 
 const aiTools = [
-  { name: 'Cursor', icon: Code2, description: 'AI-powered IDE' },
-  { name: 'GPT-4', icon: SiOpenai, description: 'Advanced reasoning' },
-  { name: 'Claude', icon: SiAnthropic, description: 'Long context' },
-  { name: 'Perplexity', icon: Search, description: 'Research assistant' },
-  { name: 'Replit', icon: Cpu, description: 'AI development' },
-  { name: 'Figma', icon: SiFigma, description: 'Design tool' },
-  { name: 'Canva', icon: SiCanva, description: 'Visual design' },
-  { name: 'Picwish', icon: Wand2, description: 'Image editing' },
+  { name: 'Cursor', icon: Code2, description: 'AI-powered IDE', color: '#171717' },
+  { name: 'GPT-4', icon: SiOpenai, description: 'Advanced reasoning', color: '#74AA9C' },
+  { name: 'Claude', icon: SiAnthropic, description: 'Long context', color: '#D97A55' },
+  { name: 'Perplexity', icon: SiPerplexity, description: 'Research assistant', color: '#000000' },
+  { name: 'Replit', icon: SiReplit, description: 'AI development', color: '#F26207' },
+  { name: 'Figma', icon: SiFigma, description: 'Design tool', color: '#F24E1E' },
+  { name: 'Canva', icon: SiCanva, description: 'Visual design', color: '#00C4CC' },
+  { name: 'Picwish', icon: Wand2, description: 'Image editing', color: '#FFFFFF' },
 ];
 
 export default function AISkillsSection() {
@@ -63,7 +66,7 @@ export default function AISkillsSection() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <tool.icon className="w-8 h-8 text-primary" />
+                    <tool.icon className="w-8 h-8" style={{ color: tool.color }} />
                     <Badge variant="outline" className="border-primary/50 text-xs">
                       {tool.name}
                     </Badge>

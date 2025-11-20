@@ -24,18 +24,18 @@ const skills = {
   ],
   frameworks: [
     { name: 'Spring Boot', icon: SiSpring, color: '#6DB33F' },
-    { name: 'Django', icon: SiDjango, color: '#092E20' },
+    { name: 'Django', icon: SiDjango, color: '#FFFFFF' },
     { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
     { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
   ],
   tools: [
     { name: 'Linux', icon: SiLinux, color: '#FCC624' },
     { name: 'Git', icon: SiGit, color: '#F05032' },
-    { name: 'GitHub', icon: SiGithub, color: '#181717' },
+    { name: 'GitHub', icon: SiGithub, color: '#FFFFFF' },
     { name: 'Vim', icon: SiVim, color: '#019733' },
     { name: 'VS Code', icon: TbBrandVscode, color: '#007ACC' },
-    { name: 'IntelliJ', icon: SiIntellijidea, color: '#000000' },
-    { name: 'PyCharm', icon: SiPycharm, color: '#000000' },
+    { name: 'IntelliJ', icon: SiIntellijidea, color: '#FFFFFF' },
+    { name: 'PyCharm', icon: SiPycharm, color: '#FFFFFF' },
   ],
   specialties: [
     { name: 'Backend Dev', icon: FaGears, color: '#FFFFFF' },
