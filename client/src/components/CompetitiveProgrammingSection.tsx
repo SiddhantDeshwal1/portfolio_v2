@@ -8,7 +8,6 @@ const platforms = [
   {
     name: 'LeetCode',
     icon: SiLeetcode,
-    rank: 'Knight',
     rating: 'Top 5%',
     color: 'text-yellow-500',
     link: '#',
@@ -17,16 +16,14 @@ const platforms = [
   {
     name: 'Codeforces',
     icon: SiCodeforces,
-    rank: 'Specialist',
     rating: '1444',
     color: 'text-cyan-500',
     link: '#',
-    achievements: ['Max Rating: 1444', 'Contest Rank: 1078th', 'ICPC Regionalist 2026']
+    achievements: ['Max Rating: 1444', 'Contest Rank: 1078th']
   },
   {
     name: 'CodeChef',
     icon: SiCodechef,
-    rank: '3-Star',
     rating: '1759',
     color: 'text-amber-600',
     link: '#',
@@ -35,7 +32,6 @@ const platforms = [
 ];
 
 const contests = [
-  { name: 'ICPC Regionals 2026', rank: 'TBD', platform: 'ICPC' },
   { name: 'CodeChef Starters 147', rank: '153rd', platform: 'CodeChef' },
   { name: 'Codeforces Round 1020', rank: '1078th', platform: 'Codeforces' },
   { name: 'LeetCode Weekly 429', rank: '1210th', platform: 'LeetCode' },
@@ -56,6 +52,16 @@ export default function CompetitiveProgrammingSection() {
 
         <div className="w-full h-64 bg-gray-700 animate-pulse" data-testid="image-placeholder"></div>
 
+        <Card className="p-8 border-primary/30 bg-card/40 backdrop-blur-sm scale-in" data-testid="card-icpc-regionalist">
+          <div className="flex items-center justify-center text-center">
+            <Trophy className="w-12 h-12 text-yellow-500" />
+            <div className="ml-4">
+              <h3 className="text-2xl font-bold text-yellow-500">ACM ICPC Regionalist</h3>
+              <p className="text-lg text-muted-foreground">2026</p>
+            </div>
+          </div>
+        </Card>
+
         <div className="grid md:grid-cols-3 gap-8">
           {platforms.map((platform, index) => (
             <Card 
@@ -72,9 +78,6 @@ export default function CompetitiveProgrammingSection() {
               <div className="space-y-2">
                 <h3 className="text-xl font-bold text-foreground">{platform.name}</h3>
                 <div className="flex gap-2">
-                  <Badge variant="outline" className="border-primary/50" data-testid={`badge-rank-${platform.name.toLowerCase()}`}>
-                    {platform.rank}
-                  </Badge>
                   <Badge variant="outline" className="border-primary/50" data-testid={`badge-rating-${platform.name.toLowerCase()}`}>
                     {platform.rating}
                   </Badge>
