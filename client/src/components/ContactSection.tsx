@@ -1,44 +1,38 @@
 import { Card } from '@/components/ui/card';
 import { 
-  SiGmail, SiLinkedin, SiGithub, SiLeetcode, SiCodeforces, SiCodechef 
-} from 'react-icons/si';
+  GmailIcon, LinkedinIcon, GithubIcon, LeetcodeIcon, CodeforcesIcon, CodechefIcon 
+} from './icons';
 
 const contactLinks = [
-  { 
+  {
     name: 'Gmail', 
-    icon: SiGmail, 
+    icon: GmailIcon, 
     href: 'mailto:siddhantdeshwalwork@gmail.com',
-    color: '#EA4335'
   },
-  { 
+  {
     name: 'LinkedIn', 
-    icon: SiLinkedin, 
+    icon: LinkedinIcon, 
     href: 'https://www.linkedin.com/in/siddhant-deshwal-639948144/',
-    color: '#0A66C2'
   },
-  { 
+  {
     name: 'GitHub', 
-    icon: SiGithub, 
+    icon: GithubIcon, 
     href: 'https://github.com/SiddhantDeshwal1',
-    color: '#FFFFFF'
   },
-  { 
+  {
     name: 'LeetCode', 
-    icon: SiLeetcode, 
+    icon: LeetcodeIcon, 
     href: 'https://leetcode.com/u/siddhantdeshwal/',
-    color: '#FFA116'
   },
-  { 
+  {
     name: 'Codeforces', 
-    icon: SiCodeforces, 
+    icon: CodeforcesIcon, 
     href: 'https://codeforces.com/profile/worthNothing',
-    color: '#4F89C1'
   },
-  { 
+  {
     name: 'CodeChef', 
-    icon: SiCodechef, 
+    icon: CodechefIcon, 
     href: 'https://www.codechef.com/users/just_lie',
-    color: '#684D42'
   },
 ];
 
@@ -68,7 +62,7 @@ export default function ContactSection() {
                 data-testid={`link-${link.name.toLowerCase()}`}
               >
                 <div className="flex flex-col items-center gap-4 p-6 rounded-md border border-primary/20 hover-elevate active-elevate-2 transition-all duration-300">
-                  <link.icon className="w-12 h-12" style={{ color: link.color }}/>
+                  <link.icon className="w-12 h-12"/>
                   <span className="text-sm text-muted-foreground">{link.name}</span>
                 </div>
               </a>

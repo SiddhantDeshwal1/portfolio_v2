@@ -1,34 +1,20 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  SiOpenai, SiAnthropic, SiFigma, SiCanva,
-  SiReplit, SiGooglegemini
-} from 'react-icons/si';
+import {
+  OpenAiIcon, AnthropicIcon, FigmaIcon, CanvaIcon, ReplitIcon,
+  CursorIcon, PerplexityIcon, GooglegeminiIcon
+} from './icons';
 import { Wand2, Code2, Cpu, Sparkles } from 'lucide-react';
 
-const PerplexityIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="black"/>
-    <path d="M16.0001 8.94116V14.1176H21.1766" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M16 23.0588V14.1176H10.8235" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-
-const CursorIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9.75 2.25L3 18.75L9.75 17.25L12 22.5L18.75 5.25L14.25 9L9.75 2.25Z" fill="black" stroke="black" strokeWidth="1.5" strokeLinejoin="round"/>
-  </svg>
-);
-
 const aiTools = [
-  { name: 'Cursor', icon: CursorIcon, description: 'AI-powered IDE', color: '#000000' },
-  { name: 'GPT-4', icon: SiOpenai, description: 'Advanced reasoning', color: '#74AA9C' },
-  { name: 'Gemini', icon: SiGooglegemini, description: 'Google\'s LLM', color: '#8E44AD' },
-  { name: 'Claude', icon: SiAnthropic, description: 'Long context', color: '#D97A55' },
-  { name: 'Perplexity', icon: PerplexityIcon, description: 'Research assistant', color: '#000000' },
-  { name: 'Replit', icon: SiReplit, description: 'AI development', color: '#F26207' },
-  { name: 'Figma', icon: SiFigma, description: 'Design tool', color: '#F24E1E' },
-  { name: 'Canva', icon: SiCanva, description: 'Visual design', color: '#00C4CC' },
+  { name: 'Cursor', icon: CursorIcon, description: 'AI-powered IDE' },
+  { name: 'GPT-4', icon: OpenAiIcon, description: 'Advanced reasoning' },
+  { name: 'Gemini', icon: GooglegeminiIcon, description: 'Google\'s LLM' },
+  { name: 'Claude', icon: AnthropicIcon, description: 'Long context' },
+  { name: 'Perplexity', icon: PerplexityIcon, description: 'Research assistant' },
+  { name: 'Replit', icon: ReplitIcon, description: 'AI development' },
+  { name: 'Figma', icon: FigmaIcon, description: 'Design tool' },
+  { name: 'Canva', icon: CanvaIcon, description: 'Visual design' },
 ];
 
 export default function AISkillsSection() {
@@ -80,7 +66,7 @@ export default function AISkillsSection() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <tool.icon className="w-8 h-8" style={{ color: tool.color }} />
+                    <tool.icon className="w-8 h-8" />
                     <Badge variant="outline" className="border-primary/50 text-xs">
                       {tool.name}
                     </Badge>

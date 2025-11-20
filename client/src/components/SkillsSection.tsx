@@ -1,47 +1,42 @@
 import { Card } from '@/components/ui/card';
 import {
-  SiC, SiCplusplus, SiPython, SiJavascript, 
-  SiSpring, SiDjango, SiFastapi, SiNodedotjs,
-  SiLinux, SiGit, SiVim, SiIntellijidea, SiPycharm,
-  SiGnubash, SiHtml5, SiCss3, SiGithub
-} from 'react-icons/si';
-import { FaJava, FaBrain, FaCloud } from 'react-icons/fa';
-import { FaGears } from 'react-icons/fa6';
-import { GrArchlinux } from 'react-icons/gr';
-import { TbBrandVscode } from 'react-icons/tb';
+  JavaIcon, PythonIcon, JavascriptIcon, Html5Icon, Css3Icon, BashIcon, SpringBootIcon,
+  DjangoIcon, FastApiIcon, NodejsIcon, LinuxIcon, GitIcon, GithubIcon, VimIcon, VscodeIcon,
+  IntellijIcon, PycharmIcon, BackendIcon, SystemDesignIcon, AlgorithmsIcon, CloudIcon
+} from './icons';
 
 
 const skills = {
   languages: [
-    { name: 'C', icon: SiC, color: '#A8B9CC' },
-    { name: 'C++', icon: SiCplusplus, color: '#00599C' },
-    { name: 'Java', icon: FaJava, color: '#007396' },
-    { name: 'Python', icon: SiPython, color: '#3776AB' },
-    { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-    { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
-    { name: 'CSS3', icon: SiCss3, color: '#1572B6' },
-    { name: 'Bash', icon: SiGnubash, color: '#4EAA25' },
+    { name: 'C', icon: BackendIcon, color: '#A8B9CC' },
+    { name: 'C++', icon: BackendIcon, color: '#00599C' },
+    { name: 'Java', icon: JavaIcon, color: '#007396' },
+    { name: 'Python', icon: PythonIcon, color: '#3776AB' },
+    { name: 'JavaScript', icon: JavascriptIcon, color: '#F7DF1E' },
+    { name: 'HTML5', icon: Html5Icon, color: '#E34F26' },
+    { name: 'CSS3', icon: Css3Icon, color: '#1572B6' },
+    { name: 'Bash', icon: BashIcon, color: '#4EAA25' },
   ],
   frameworks: [
-    { name: 'Spring Boot', icon: SiSpring, color: '#6DB33F' },
-    { name: 'Django', icon: SiDjango, color: '#FFFFFF' },
-    { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
-    { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
+    { name: 'Spring Boot', icon: SpringBootIcon, color: '#6DB33F' },
+    { name: 'Django', icon: DjangoIcon, color: '#092E20' },
+    { name: 'FastAPI', icon: FastApiIcon, color: '#009688' },
+    { name: 'Node.js', icon: NodejsIcon, color: '#339933' },
   ],
   tools: [
-    { name: 'Linux', icon: SiLinux, color: '#FCC624' },
-    { name: 'Git', icon: SiGit, color: '#F05032' },
-    { name: 'GitHub', icon: SiGithub, color: '#FFFFFF' },
-    { name: 'Vim', icon: SiVim, color: '#019733' },
-    { name: 'VS Code', icon: TbBrandVscode, color: '#007ACC' },
-    { name: 'IntelliJ', icon: SiIntellijidea, color: '#FFFFFF' },
-    { name: 'PyCharm', icon: SiPycharm, color: '#FFFFFF' },
+    { name: 'Linux', icon: LinuxIcon, color: '#FCC624' },
+    { name: 'Git', icon: GitIcon, color: '#F05032' },
+    { name: 'GitHub', icon: GithubIcon, color: '#181717' },
+    { name: 'Vim', icon: VimIcon, color: '#019733' },
+    { name: 'VS Code', icon: VscodeIcon, color: '#007ACC' },
+    { name: 'IntelliJ', icon: IntellijIcon, color: '#FFFFFF' },
+    { name: 'PyCharm', icon: PycharmIcon, color: '#FFFFFF' },
   ],
   specialties: [
-    { name: 'Backend Dev', icon: FaGears, color: '#FFFFFF' },
-    { name: 'System Design', icon: GrArchlinux, color: '#1793D1' },
-    { name: 'Algorithms', icon: FaBrain, color: '#F9AC4F' },
-    { name: 'Cloud', icon: FaCloud, color: '#00A1DE' },
+    { name: 'Backend Dev', icon: BackendIcon, color: '#FFFFFF' },
+    { name: 'System Design', icon: SystemDesignIcon, color: '#1793D1' },
+    { name: 'Algorithms', icon: AlgorithmsIcon, color: '#F9AC4F' },
+    { name: 'Cloud', icon: CloudIcon, color: '#00A1DE' },
   ],
 };
 
