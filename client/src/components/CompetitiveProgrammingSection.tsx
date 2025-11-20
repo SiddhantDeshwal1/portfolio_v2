@@ -21,7 +21,7 @@ const platforms = [
     rating: '1444',
     color: 'text-cyan-500',
     link: '#',
-    achievements: ['Max Rating: 1444', 'Contest Rank: 1078th']
+    achievements: ['Max Rating: 1444', 'Contest Rank: 1078th', 'ICPC Regionalist 2026']
   },
   {
     name: 'CodeChef',
@@ -35,6 +35,7 @@ const platforms = [
 ];
 
 const contests = [
+  { name: 'ICPC Regionals 2026', rank: 'TBD', platform: 'ICPC' },
   { name: 'CodeChef Starters 147', rank: '153rd', platform: 'CodeChef' },
   { name: 'Codeforces Round 1020', rank: '1078th', platform: 'Codeforces' },
   { name: 'LeetCode Weekly 429', rank: '1210th', platform: 'LeetCode' },
