@@ -5,30 +5,25 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { 
-  SiReact, SiVite, SiTailwindcss, SiNodedotjs, SiExpress, 
-  SiFastapi, SiDjango, SiPostgresql, SiDrizzle, SiPython, 
-  SiJavascript, SiTypescript, SiLinux, SiDocker, SiGit 
-} from 'react-icons/si';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const techStack = [
-  { name: 'JavaScript (ES6+)', icon: SiJavascript },
-  { name: 'TypeScript', icon: SiTypescript },
-  { name: 'Python', icon: SiPython },
-  { name: 'React', icon: SiReact },
-  { name: 'Node.js', icon: SiNodedotjs },
-  { name: 'Express', icon: SiExpress },
-  { name: 'FastAPI', icon: SiFastapi },
-  { name: 'Django', icon: SiDjango },
-  { name: 'PostgreSQL', icon: SiPostgresql },
-  { name: 'Drizzle ORM', icon: SiDrizzle },
-  { name: 'Tailwind CSS', icon: SiTailwindcss },
-  { name: 'Vite', icon: SiVite },
-  { name: 'Linux', icon: SiLinux },
-  { name: 'Docker', icon: SiDocker },
-  { name: 'Git', icon: SiGit },
+  { name: 'JavaScript (ES6+)', icon: '/icons/javascript.jpg' },
+  { name: 'TypeScript', icon: '/icons/typescript.png' }, // Assuming a typescript.png exists or will be provided
+  { name: 'Python', icon: '/icons/python.webp' },
+  { name: 'React', icon: '/icons/react.png' }, // Assuming a react.png exists or will be provided
+  { name: 'Node.js', icon: '/icons/nodejs.png' },
+  { name: 'Express', icon: '/icons/express.png' }, // Assuming an express.png exists or will be provided
+  { name: 'FastAPI', icon: '/icons/fastapi.png' },
+  { name: 'Django', icon: '/icons/django.png' },
+  { name: 'PostgreSQL', icon: '/icons/postgresql.png' }, // Assuming a postgresql.png exists or will be provided
+  { name: 'Drizzle ORM', icon: '/icons/drizzle.png' }, // Assuming a drizzle.png exists or will be provided
+  { name: 'Tailwind CSS', icon: '/icons/tailwindcss.png' }, // Assuming a tailwindcss.png exists or will be provided
+  { name: 'Vite', icon: '/icons/vite.png' }, // Assuming a vite.png exists or will be provided
+  { name: 'Linux', icon: '/icons/linux.jpg' },
+  { name: 'Docker', icon: '/icons/docker.png' }, // Assuming a docker.png exists or will be provided
+  { name: 'Git', icon: '/icons/git.png' },
 ];
 
 const images = [
@@ -114,7 +109,7 @@ export default function AboutSection() {
                   <Tooltip key={tech.name}>
                     <TooltipTrigger>
                       <div className="text-muted-foreground hover:text-primary transition-colors">
-                        <tech.icon className="w-8 h-8" />
+                        <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
                       </div>
                     </TooltipTrigger>
                     <TooltipContent>

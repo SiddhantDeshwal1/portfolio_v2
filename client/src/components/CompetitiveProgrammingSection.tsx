@@ -1,37 +1,37 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { SiLeetcode, SiCodeforces, SiCodechef } from 'react-icons/si';
 import { Trophy, ExternalLink } from 'lucide-react';
 
 const platforms = [
   {
     name: 'LeetCode',
-    icon: SiLeetcode,
+    icon: '/icons/leetcode.webp',
     rating: 'Top 5%',
-    color: 'text-yellow-500',
+    color: 'text-yellow-500', // This color property might not be used with img tags
     link: '#',
     achievements: ['Global Rank: Top 5%', '1000+ Problems Solved']
   },
   {
     name: 'Codeforces',
-    icon: SiCodeforces,
+    icon: '/icons/codeforces.png',
     rating: '1444',
-    color: 'text-cyan-500',
+    color: 'text-cyan-500', // This color property might not be used with img tags
     link: '#',
-    achievements: ['Max Rating: 1444', 'Contest Rank: 1078th']
+    achievements: ['Max Rating: 1444', 'Contest Rank: 1078th', 'ICPC Regionalist 2026']
   },
   {
     name: 'CodeChef',
-    icon: SiCodechef,
+    icon: '/icons/codechef.png',
     rating: '1759',
-    color: 'text-amber-600',
+    color: 'text-amber-600', // This color property might not be used with img tags
     link: '#',
     achievements: ['Max Rating: 1759', 'Contest Rank: 153rd']
   },
 ];
 
 const contests = [
+  { name: 'ICPC Regionals 2026', rank: 'TBD', platform: 'ICPC' },
   { name: 'CodeChef Starters 147', rank: '153rd', platform: 'CodeChef' },
   { name: 'Codeforces Round 1020', rank: '1078th', platform: 'Codeforces' },
   { name: 'LeetCode Weekly 429', rank: '1210th', platform: 'LeetCode' },
@@ -71,7 +71,7 @@ export default function CompetitiveProgrammingSection() {
               data-testid={`card-platform-${platform.name.toLowerCase()}`}
             >
               <div className="flex items-center justify-between">
-                <platform.icon className={`w-12 h-12 ${platform.color} transition-transform duration-300 hover:scale-110`} />
+                <img src={platform.icon} alt={platform.name} className={`w-12 h-12 transition-transform duration-300 hover:scale-110`} />
                 <Trophy className="w-6 h-6 text-primary" />
               </div>
 
