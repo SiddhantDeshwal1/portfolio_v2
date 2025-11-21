@@ -37,23 +37,17 @@ const images = [
 ];
 
 const slideVariants = {
-  enter: (direction: number) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    };
+  enter: {
+    opacity: 0,
+    scale: 1.1,
   },
   center: {
-    zIndex: 1,
-    x: 0,
     opacity: 1,
+    scale: 1,
   },
-  exit: (direction: number) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    };
+  exit: {
+    opacity: 0,
+    scale: 1.1,
   },
 };
 
@@ -138,8 +132,8 @@ export default function AboutSection() {
               animate="center"
               exit="exit"
               transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 },
+                opacity: { duration: 0.5 },
+                scale: { duration: 1.5 },
               }}
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
