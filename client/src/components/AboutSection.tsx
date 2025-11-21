@@ -61,9 +61,13 @@ export default function AboutSection() {
   const [[page, direction], setPage] = useState([0, 0]);
   const imageIndex = ((page % images.length) + images.length) % images.length;
 
+  const paginate = (newDirection: number) => {
+    setPage([page + newDirection, newDirection]);
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setPage([page + 1, 1]);
+      paginate(1);
     }, 3000);
     return () => clearInterval(timer);
   }, [page]);
@@ -123,7 +127,7 @@ export default function AboutSection() {
             </div>
           </div>
         </Card>
-        <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg">
+        <div className="relative w-full overflow-hidden rounded-lg shadow-lg" style={{ paddingTop: '56.25%' }}>
           <AnimatePresence initial={false} custom={direction}>
             <motion.img
               key={page}
@@ -137,9 +141,19 @@ export default function AboutSection() {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              className="absolute w-full h-full object-cover"
+              className="absolute top-0 left-0 w-full h-full object-cover"
             />
           </AnimatePresence>
+        </div>
+        <div className="flex justify-center space-x-2">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setPage([i, i > imageIndex ? 1 : -1])}
+              className={`w-3 h-3 rounded-full ${imageIndex === i ? 'bg-primary' : 'bg-muted'}`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>
