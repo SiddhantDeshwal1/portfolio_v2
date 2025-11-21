@@ -8,21 +8,23 @@ import {
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// Icons that are directly available as images in dist/icons/
+// For others, we'll keep placeholders or use generic alternatives for now
 const techStack = [
   { name: 'JavaScript (ES6+)', icon: '/icons/javascript.jpg' },
-  { name: 'TypeScript', icon: '/icons/typescript.png' }, // Assuming a typescript.png exists or will be provided
+  { name: 'TypeScript', icon: '/icons/typescript.png' }, // Assuming it will be provided
   { name: 'Python', icon: '/icons/python.webp' },
-  { name: 'React', icon: '/icons/react.png' }, // Assuming a react.png exists or will be provided
+  { name: 'React', icon: '/icons/react.png' }, // Assuming it will be provided
   { name: 'Node.js', icon: '/icons/nodejs.png' },
-  { name: 'Express', icon: '/icons/express.png' }, // Assuming an express.png exists or will be provided
+  { name: 'Express', icon: '/icons/express.png' }, // Assuming it will be provided
   { name: 'FastAPI', icon: '/icons/fastapi.png' },
   { name: 'Django', icon: '/icons/django.png' },
-  { name: 'PostgreSQL', icon: '/icons/postgresql.png' }, // Assuming a postgresql.png exists or will be provided
-  { name: 'Drizzle ORM', icon: '/icons/drizzle.png' }, // Assuming a drizzle.png exists or will be provided
-  { name: 'Tailwind CSS', icon: '/icons/tailwindcss.png' }, // Assuming a tailwindcss.png exists or will be provided
-  { name: 'Vite', icon: '/icons/vite.png' }, // Assuming a vite.png exists or will be provided
+  { name: 'PostgreSQL', icon: '/icons/postgresql.png' }, // Assuming it will be provided
+  { name: 'Drizzle ORM', icon: '/icons/drizzle.png' }, // Assuming it will be provided
+  { name: 'Tailwind CSS', icon: '/icons/tailwindcss.png' }, // Assuming it will be provided
+  { name: 'Vite', icon: '/icons/vite.png' }, // Assuming it will be provided
   { name: 'Linux', icon: '/icons/linux.jpg' },
-  { name: 'Docker', icon: '/icons/docker.png' }, // Assuming a docker.png exists or will be provided
+  { name: 'Docker', icon: '/icons/docker.png' }, // Assuming it will be provided
   { name: 'Git', icon: '/icons/git.png' },
 ];
 
