@@ -32,9 +32,11 @@ const techStack = [
 ];
 
 const images = [
-  "https://via.placeholder.com/1280x720.png/000/fff?text=Image+1",
-  "https://via.placeholder.com/1280x720.png/000/fff?text=Image+2",
-  "https://via.placeholder.com/1280x720.png/000/fff?text=Image+3",
+  "/flexBanners/1.png",
+  "/flexBanners/2.png",
+  "/flexBanners/3.png",
+  "/flexBanners/4.png",
+  "/flexBanners/5.png",
 ];
 
 const slideVariants = {
